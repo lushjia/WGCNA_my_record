@@ -7,6 +7,7 @@
 
 #########################################################
 # WGCNA analysis 
+# part of the HD.R script in the yooa@storage1.ris.wustl.edu:/Active/Shuangjia/WGCNA folder
 # moderate cut-off, signed model, dicor, protein_coding gene
 
 setwd("./") # set working directory
@@ -389,7 +390,7 @@ MM_GS_plot(module = "brown")
 #names(log2_cpm_df)[moduleColors=="yellow"]
 
 #=================================================
-#¡¡5. Visualizing the gene network (time assuming, drawing use HPC)
+#Â¡Â¡5. Visualizing the gene network (time assuming, drawing use HPC)
 
 ## Gene network (Calculate using HPC)
 # Loading objects: TOM
@@ -521,7 +522,7 @@ condition_modules_barplot(modTraitCor, modTraitP, moduleColors)
 
 #=================================================
 # GO, KEGG enrichment for yellow, and darkred modules (no need)
-#¡¡no GO for non-coding genes
+#Â¡Â¡no GO for non-coding genes
 
 find_go_kegg <- function(module_name, type){
   ## Input: module_name = one color, type = go or kegg
