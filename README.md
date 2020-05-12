@@ -12,10 +12,11 @@ In that website, *Tutorials* part contains all the R script one needed to instal
 - **TOM(Topological overlap matrix)**: To minimize effects of noise and spurious associations, they transform the adjacency into Topological Overlap Matrix, and calculate the corresponding dissimilarity
 
 #### Input and Parameters
-- **sample size**: They do not recommend attempting WGCNA on a data set consisting of fewer than 15 samples.  If at all possible, one should have at least 20 samples
+- **sample size**: They don't recommend attempting WGCNA on a data set consisting of fewer than 15 samples.  If at all possible, one should have at least 20 samples
 - **gene expression matrix**: Rows represent the genes. Columns represent the samples. This matrix will be transposed in the WGCNA script. They then recommend a variance-stabilizing transformation. For example, package DESeq2 implements the function varianceStabilizingTransformation which we have found useful, but one could also start with normalized counts (or RPKM/FPKM data) and log-transform them using log2(x+1). For highly expressed features, the differences between full variance stabilization and a simple log transformation are small.
-- **trait matrix**: the values of this matrix must be numbers, but not characters
-- 
+- **trait matrix**: The values of this matrix must be numbers, but not characters
+- **type of network and correlation**: There are 3 types of networks ('unsigned', 'signed' and 'signed hybrid'), which could be built using WGCNA. 2 correlation could be chosen, Pearson correlation and biweight midcorrelation(bicor). They recommend to use `Signed networks` and `Robust correlation(bicor)`. [Here are the details](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/faq.html).  Besides, if you try to build a consensus network from two group of samples, there is also a tutorials for [consensus analysis](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html). 
+
 
 
 
