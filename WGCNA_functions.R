@@ -7,7 +7,6 @@
 
 #########################################################
 # WGCNA analysis 
-# part of the HD.R script in the yooa@storage1.ris.wustl.edu:/Active/Shuangjia/WGCNA folder
 # moderate cut-off, signed model, dicor, protein_coding gene
 
 setwd("./") # set working directory
