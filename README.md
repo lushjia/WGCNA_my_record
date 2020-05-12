@@ -6,13 +6,13 @@ In that website, *Tutorials* part contains all the R script one needed to instal
 ##### Some Terms 
 - **soft threshold**: a power used to weighted the correlation, calculated by `pickSoftThreshold` function in WGCNA package
 - **module**: expressions of genes in one module are highly correlation with each other. In signed network, the genes in one module are positively correlated, while in unsigned network, the genes are either positively or negatively correlated.
-- **module eigengene**: 
-
-
-
+- **module eigengene**: PC1 of genes in one module, which could capture main features of the whole module
+- **module membership:**: correlation between a gene and the module eigengene, could be used to identify intramodular hub genes
+- **adjacency matrix**: weighted correlation matrix among genes
+- **TOM(Topological overlap matrix)**: To minimize effects of noise and spurious associations, they transform the adjacency into Topological Overlap Matrix, and calculate the corresponding dissimilarity
 
 ##### Input and Parameters
-
+- 
 
 
 
