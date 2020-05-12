@@ -16,13 +16,14 @@ In that website, *Tutorials* part contains all the R script one needed to instal
 - **gene expression matrix**: Rows represent the genes. Columns represent the samples. This matrix will be transposed in the WGCNA script. They then recommend a variance-stabilizing transformation. For example, package DESeq2 implements the function varianceStabilizingTransformation which we have found useful, but one could also start with normalized counts (or RPKM/FPKM data) and log-transform them using log2(x+1). For highly expressed features, the differences between full variance stabilization and a simple log transformation are small.
 - **trait matrix**: The values of this matrix must be numbers, but not characters
 - **type of network and correlation**: There are 3 types of networks ('unsigned', 'signed' and 'signed hybrid'), which could be built using WGCNA. 2 correlation could be chosen, Pearson correlation and biweight midcorrelation(bicor). They recommend to use `Signed networks` and `Robust correlation(bicor)`. [Here are the details](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/faq.html).  Besides, if you try to build a consensus network from two group of samples, there is also a tutorials for [consensus analysis](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html). 
+- **soft threshold power**: If the scale-free topology fit index fails to reach values above 0.8 for reasonable powers (less than 15 for unsigned or signed hybrid networks, and less than 30 for signed networks) and the mean connectivity remains relatively high (in the hundreds or above), chances are that the data exhibit a strong driver that makes a subset of the samples globally different from the rest.  If the lack of scale-free topology fit turns out to be caused by an interesting biological variable that one does not want to remove (i.e., adjust the data for), the appropriate soft-thresholding power can be chosen based on the number of samples as in the table below.
 
-
-
-
-
-
-
+| Number of samples | Unsigned and signed hybrid networks | Signed networks |
+| --- | --- | --- |
+| Less than 20 | 9 | 18 |
+| 20-30 | 8 | 16 |
+| 30-40 | 7 | 14 |
+| more than 40 | 6 | 12 |
 
 
 
