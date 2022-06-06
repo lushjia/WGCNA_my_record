@@ -1,7 +1,7 @@
 # WGCNA
 ### WGCNA for RNAseq data
-This repository records my opinion on how to use WGCNA package and some following analysis of the coexpression network. Most information posted here is gathered from this official [WGCNA website]( https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/index.html).
-In that website, *Tutorials* part contains all the R script one needed to install and run WGNCA. *FAQ: Problems installing or using the package* part contains some details of how to choose parameters based on the network you want to build. 
+This repository records my experience of using WGCNA package and running some following analysis of the coexpression network. Most information posted here is gathered from this official [WGCNA website]( https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/index.html).
+In that website, *Tutorials* part includes all the R script needed to install and run WGNCA. *FAQ: Problems installing or using the package* part includes some details of how to choose parameters based on the network you want to build. 
 
 #### Some Terms 
 - **soft threshold**: a power used to weight the correlation, calculated by `pickSoftThreshold` function in WGCNA package
@@ -26,15 +26,15 @@ In that website, *Tutorials* part contains all the R script one needed to instal
 | more than 40 | 6 | 12 |
 
 #### Some notes
-- network is controled by `networkType` parameter in `blockwiseModules` function. `TOMType` is the type fo TOM matrix, which only make sense in 'networkTyp=unsigned' network. [Related paper](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/TechnicalReports/signedTOM.pdf).
+- network is controled by `networkType` parameter in `blockwiseModules` function. `TOMType` is the type fo TOM matrix, which only works in 'networkTyp=unsigned' network. [Related paper](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/TechnicalReports/signedTOM.pdf).
 
 
 ### WGCNA_functins.R
 This is an example of using WGCNA to build a signed network for protein coding genes. In this R script, I integrated each step in WGCNA Tutorials into a function, so that we can run each step using a one-line command. This script is part of the `HD.R` script in the `yooa@storage1.ris.wustl.edu:/Active/Shuangjia/WGCNA` folder
 
 **Notice**: 
-1. some commands in this file targets specifically  on this file: `yooa@storage1.ris.wustl.edu:/Active/Youngmi/htcf.wustl.edu/files/pd67E8el/Yoo_s4611_MGI0029/all.gene_counts.tsv`. 
+1. some commands in this file target specifically on this file: `yooa@storage1.ris.wustl.edu:/Active/Youngmi/htcf.wustl.edu/files/pd67E8el/Yoo_s4611_MGI0029/all.gene_counts.tsv`. 
 If you try to run WGCNA on another file, the first step, *1. Data input and cleaning*, needs to be changed. 
-2. when running some step, we'd better compute using high performance cluster(HPC) but not our own laptop, because the memory requirement is super large. I marked those steps using (HPC) in my script, and if one tries to run it on HPC, he/she should first upload the outputs to the HPC and then run the script. 
+2. when running some step, we'd better use high performance cluster(HPC) rather than our own laptop due to large memory requirement. I marked those steps as (HPC) in my script. If one tries to run it on HPC, he/she should first upload the outputs to the HPC and then run the script. 
 
 
