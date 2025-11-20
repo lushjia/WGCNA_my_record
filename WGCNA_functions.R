@@ -389,7 +389,7 @@ MM_GS_plot(module = "brown")
 #names(log2_cpm_df)[moduleColors=="yellow"]
 
 #=================================================
-#¡¡5. Visualizing the gene network (time assuming, drawing use HPC)
+# 5. Visualizing the gene network (time consuming, drawing use HPC)
 
 ## Gene network (Calculate using HPC)
 # Loading objects: TOM
@@ -703,6 +703,7 @@ c('yellow','brown','green','red','black','greenyellow')
 #                              'gene_biotype' = gene_info$gene_biotype[match(probes,gene_info$external_gene_name)],
 #                              'description' = gene_info$description[match(probes,gene_info$external_gene_name)])
 # write.csv(gene_module_df,'gene_module_df')
+
 
 
 
