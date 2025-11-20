@@ -429,7 +429,7 @@ eigengenes_network(MEs,condition)
 #=================================================
 # 6. Exporting to Cytoscape (Calculate use HPC) (have not)
 
-# usually should use HPC!!!
+# always use HPC!!!
 export_to_cytoscape <- function(module){
   ## export one module
   
@@ -703,6 +703,7 @@ c('yellow','brown','green','red','black','greenyellow')
 #                              'gene_biotype' = gene_info$gene_biotype[match(probes,gene_info$external_gene_name)],
 #                              'description' = gene_info$description[match(probes,gene_info$external_gene_name)])
 # write.csv(gene_module_df,'gene_module_df')
+
 
 
 
