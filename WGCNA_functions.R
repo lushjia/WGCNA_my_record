@@ -521,7 +521,7 @@ condition_modules_barplot(modTraitCor, modTraitP, moduleColors)
 
 #=================================================
 # GO, KEGG enrichment for yellow, and darkred modules (no need)
-#¡¡no GO for non-coding genes
+# no GO for non-coding genes
 
 find_go_kegg <- function(module_name, type){
   ## Input: module_name = one color, type = go or kegg
@@ -703,6 +703,7 @@ c('yellow','brown','green','red','black','greenyellow')
 #                              'gene_biotype' = gene_info$gene_biotype[match(probes,gene_info$external_gene_name)],
 #                              'description' = gene_info$description[match(probes,gene_info$external_gene_name)])
 # write.csv(gene_module_df,'gene_module_df')
+
 
 
 
