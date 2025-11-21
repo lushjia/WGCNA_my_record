@@ -33,7 +33,7 @@ In that website, *Tutorials* part includes all the R script needed to install an
 This is an example of using WGCNA to build a signed network for protein coding genes. In this R script, I integrated each step in WGCNA Tutorials into a function, so that we can run each step using a one-line command. This script is part of the `HD.R` script in the `yooa@storage1.ris.wustl.edu:/Active/Shuangjia/WGCNA` folder
 
 **Notice**: 
-1. some commands in this file target specifically on this file: `yooa@storage1.ris.wustl.edu:/Active/Youngmi/htcf.wustl.edu/files/pd67E8el/Yoo_s4611_MGI0029/all.gene_counts.tsv`. 
+1. some commands in this file target specifically on this file: `/Active/Youngmi/htcf.wustl.edu/files/pd67E8el/Yoo_s4611_MGI0029/all.gene_counts.tsv`. 
 If you try to run WGCNA on another file, the first step, *1. Data input and cleaning*, needs to be changed. 
 2. when running some step, we'd better use high performance cluster(HPC) rather than our own laptop due to large memory requirement. I marked those steps as (HPC) in my script. If one tries to run it on HPC, he/she should first upload the outputs to the HPC and then run the script. 
 
